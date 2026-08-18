@@ -1,0 +1,8 @@
+{
+    "readiness_score": 50,
+    "service": "API-GATEWAY",
+    "scenario": "Memory Leak",
+    "recovery_time_minutes": 15,
+    "target_rto_minutes": 5,
+    "rto_compliant": false
+}
