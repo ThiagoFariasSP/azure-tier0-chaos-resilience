@@ -1,0 +1,14 @@
+readiness_score,service,scenario,recovery_time_minutes,target_rto_minutes,rto_compliant
+60,CUSTOMER-DB,Network Partition,14,10,False
+100,CUSTOMER-DB,CPU Saturation,10,10,True
+100,CUSTOMER-DB,Network Partition,8,10,True
+100,CUSTOMER-DB,Network Partition,10,10,True
+10,PAYMENT-API,Replication Lag,14,5,False
+100,CUSTOMER-DB,Replication Lag,10,10,True
+60,CUSTOMER-DB,Network Partition,14,10,False
+60,CUSTOMER-DB,CPU Saturation,14,10,False
+0,API-GATEWAY,VM Failure,15,5,False
+100,API-GATEWAY,Network Partition,3,5,True
+30,AUTH-01,VM Failure,12,5,False
+100,AUTH-01,Memory Leak,5,5,True
+90,PAYMENT-API,VM Failure,6,5,False
