@@ -58,6 +58,13 @@ report_path = Path(
 with open(report_path, "w") as file:
     json.dump(report, file, indent=4)
 
+latest_report_path = Path(
+    "reports/latest_report.json"
+)
+
+with open(latest_report_path, "w") as file:
+    json.dump(report, file, indent=4)
+
 print()
 print("================================")
 print("TIER 0 CHAOS TEST RESULT")
