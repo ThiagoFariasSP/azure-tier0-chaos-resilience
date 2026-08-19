@@ -1,0 +1,8 @@
+{
+  "services": {
+    "AUTH-01": 5,
+    "PAYMENT-API": 5,
+    "CUSTOMER-DB": 10,
+    "API-GATEWAY": 5
+  }
+}
