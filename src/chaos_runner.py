@@ -1,5 +1,6 @@
 import json
 import random
+import json
 from pathlib import Path
 from readiness import calculate_readiness_score
 
@@ -18,12 +19,10 @@ chaos_scenarios = [
     "Replication Lag"
 ]
 
-rto_targets = {
-    "AUTH-01": 5,
-    "PAYMENT-API": 5,
-    "CUSTOMER-DB": 10,
-    "API-GATEWAY": 5
-}
+with open("config.json", "r") as file:
+    config = json.load(file)
+
+rto_targets = config["services"]
 
 service = random.choice(services)
 scenario = random.choice(chaos_scenarios)
