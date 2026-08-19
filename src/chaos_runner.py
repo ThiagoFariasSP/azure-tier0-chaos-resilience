@@ -47,7 +47,13 @@ report = {
     "rto_compliant": rto_compliant
 }
 
-report_path = Path("reports/latest_report.json")
+from datetime import datetime
+
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+report_path = Path(
+    f"reports/run_{timestamp}.json"
+)
 
 with open(report_path, "w") as file:
     json.dump(report, file, indent=4)
