@@ -1,8 +1,8 @@
 {
-    "readiness_score": 90,
-    "service": "PAYMENT-API",
+    "readiness_score": 30,
+    "service": "AUTH-01",
     "scenario": "VM Failure",
-    "recovery_time_minutes": 6,
+    "recovery_time_minutes": 12,
     "target_rto_minutes": 5,
     "rto_compliant": false
 }

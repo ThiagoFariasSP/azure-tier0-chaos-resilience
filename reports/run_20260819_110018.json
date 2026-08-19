@@ -1,0 +1,8 @@
+{
+    "readiness_score": 10,
+    "service": "PAYMENT-API",
+    "scenario": "Replication Lag",
+    "recovery_time_minutes": 14,
+    "target_rto_minutes": 5,
+    "rto_compliant": false
+}

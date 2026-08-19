@@ -1,0 +1,8 @@
+{
+    "readiness_score": 100,
+    "service": "CUSTOMER-DB",
+    "scenario": "Network Partition",
+    "recovery_time_minutes": 8,
+    "target_rto_minutes": 10,
+    "rto_compliant": true
+}
