@@ -3,7 +3,10 @@ def calculate_readiness_score(
     target_rto: int
 ) -> int:
 
-    if recovery_time <= target_rto:
-        return 100
+    score = 100
 
-    return 50
+    if recovery_time > target_rto:
+        excess = recovery_time - target_rto
+        score = max(0, 100 - (excess * 10))
+
+    return score

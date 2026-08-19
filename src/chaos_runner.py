@@ -1,6 +1,7 @@
 import json
 import random
 from pathlib import Path
+from readiness import calculate_readiness_score
 
 services = [
     "AUTH-01",
@@ -32,11 +33,10 @@ recovery_time = random.randint(1, 15)
 target_rto = rto_targets[service]
 
 rto_compliant = recovery_time <= target_rto
-
-if rto_compliant:
-    readiness_score = 100
-else:
-    readiness_score = 50
+readiness_score = calculate_readiness_score(
+    recovery_time,
+    target_rto
+)
 
 report = {
     "readiness_score": readiness_score,
