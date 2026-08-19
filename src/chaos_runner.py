@@ -4,12 +4,14 @@ import json
 from pathlib import Path
 from readiness import calculate_readiness_score
 
-services = [
-    "AUTH-01",
-    "PAYMENT-API",
-    "CUSTOMER-DB",
-    "API-GATEWAY"
-]
+with open("config.json", "r") as file:
+    config = json.load(file)
+
+rto_targets = config["services"]
+
+services = list(
+    rto_targets.keys()
+)
 
 chaos_scenarios = [
     "VM Failure",
@@ -18,11 +20,6 @@ chaos_scenarios = [
     "Network Partition",
     "Replication Lag"
 ]
-
-with open("config.json", "r") as file:
-    config = json.load(file)
-
-rto_targets = config["services"]
 
 service = random.choice(services)
 scenario = random.choice(chaos_scenarios)
